@@ -18,7 +18,8 @@ Releases of all packages are available here: [Releases](https://github.com/ibm-s
 The following components are currently offered in the package.
 | Component | Description |
 | ----------- | ----------- |
-| [Privacy](sdk/privacy) | Fast, opinionated, simple privacy component that leverages the data privacy & consent engine on IBM Security Verify. |
+| [Privacy](sdk/privacy) | Fast, opinionated, simple privacy component that leverages the data privacy & consent engine on IBM Verify. |
+| [Examples](examples/) | Collection of **demo applications** that illustrate common server-side scenarios supporting mobile identity, authentication, and digital credential use cases. |
 
 ### Installation
 
