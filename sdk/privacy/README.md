@@ -79,8 +79,8 @@ $ npm install @ibm-verify/privacy
 
 ## Documentation
 
-* [Library documentation](https://ibm-security-verify.github.io/javascript/privacy/docs/index.html)
-* [Usage examples](https://github.com/ibm-security-verify/verify-sdk-javascript/tree/master/sdk/privacy/examples)
+* [Library documentation](https://ibm-verify.github.io/javascript/privacy/docs/index.html)
+* [Usage examples](https://github.com/ibm-verify/verify-sdk-javascript/tree/main/sdk/privacy/examples)
 
 ## Tests
 

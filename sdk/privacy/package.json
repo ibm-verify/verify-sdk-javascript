@@ -24,7 +24,7 @@
   "repository": {
     "directory": "sdk/privacy",
     "type": "git",
-    "url": "https://github.com/ibm-security-verify/verify-sdk-javascript.git"
+    "url": "https://github.com/ibm-verify/verify-sdk-javascript.git"
   },
   "license": "MIT",
   "dependencies": {

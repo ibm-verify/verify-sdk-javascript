@@ -1,6 +1,6 @@
 # IBM Verify Privacy SDK examples
 
-A set of examples are provided in this repository to showcase the use of the [IBM Verify SDK for Javascript](https://github.com/ibm-security-verify/verify-sdk-javascript).
+A set of examples are provided in this repository to showcase the use of the [IBM Verify SDK for Javascript](https://github.com/ibm-verify/verify-sdk-javascript).
 
 ## Pre-requisites
 

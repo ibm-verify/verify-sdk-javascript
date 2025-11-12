@@ -12,7 +12,7 @@ Le code source adhère à [Google Javascript](https://google.github.io/styleguid
 
 ## Enjeux et questions
 
-Si vous rencontrez un problème, si vous avez une question ou si vous souhaitez suggérer une amélioration du SDK IBM Verify, n'hésitez pas à soumettre une [demande](https://github.com/ibm-security-verify/verify-sdk-javascript/issues).
+Si vous rencontrez un problème, si vous avez une question ou si vous souhaitez suggérer une amélioration du SDK IBM Verify, n'hésitez pas à soumettre une [demande](https://github.com/ibm-verify/verify-sdk-javascript/issues).
 Avant cela, veuillez rechercher des problèmes similaires. Il est possible que quelqu'un ait déjà rencontré ce problème.
 
 ## Demandes d'extraction

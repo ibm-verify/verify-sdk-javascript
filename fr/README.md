@@ -13,7 +13,7 @@ Pour commencer à utiliser un composant spécifique, consultez le fichier **READ
 
 ### Composants
 
-Les versions de tous les paquets sont disponibles ici : [Communiqués de presse](https://github.com/ibm-security-verify/verify-sdk-javascript/tags)
+Les versions de tous les paquets sont disponibles ici : [Communiqués de presse](https://github.com/ibm-verify/verify-sdk-javascript/tags)
 
 Les composants suivants sont actuellement proposés dans le paquet.
 | Composant | Description |

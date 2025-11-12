@@ -192,7 +192,7 @@ _parseItems = async (input) => {
 /**
  * Metadata record returned by the SDK
  * @external MetadataRecord
- * @see {@link https://ibm-security-verify.github.io/javascript/privacy/docs/global.html#MetadataRecord}
+ * @see {@link https://ibm-verify.github.io/javascript/privacy/docs/global.html#MetadataRecord}
  */
 
 /**
