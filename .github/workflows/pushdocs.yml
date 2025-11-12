@@ -37,10 +37,12 @@ jobs:
 
       - name: Authorize GitHub CLI
         env:
-          GITHUB_TOKEN: ${{ secrets.GH_PAGES_API_TOKEN }}
+          GH_PAGES_TOKEN: ${{ secrets.GH_PAGES_API_TOKEN }}
         run: |
-          env -u GITHUB_TOKEN gh auth login --with-token <<< "$GITHUB_TOKEN"
+          env -u GH_PAGES_TOKEN gh auth login --with-token <<< "$GH_PAGES_TOKEN"
       
       - name: Push docs
+        env:
+          GH_PAGES_TOKEN: ${{ secrets.GH_PAGES_API_TOKEN }}
         run: ${{ github.workspace }}/monorepo/.github/scripts/pushdocs.sh
         shell: bash

@@ -32,6 +32,7 @@ git config -l | grep 'http\..*\.extraheader' | cut -d= -f1 | \
 # set up git config
 git config user.email "shankarv@sg.ibm.com"
 git config user.name "shankarv"
+git remote set-url origin https://${GH_PAGES_TOKEN}@github.com/${PAGES_USER}/${PAGES_REPO}
 
 git diff --no-pager --exit-code
 if [ $? -eq 0 ]; then
@@ -45,7 +46,6 @@ else
   # commit changes
   git add -A
   git commit -m "${MESSAGE}"
-  git status
 
   # push to repo
   git push -u origin $BRANCH_NAME
