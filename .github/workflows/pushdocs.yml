@@ -35,6 +35,12 @@ jobs:
         with:
           node-version: '12'
 
+      - name: Authorize GitHub CLI
+        env:
+          GITHUB_TOKEN: ${{ secrets.GH_PAGES_API_TOKEN }}
+        run: |
+          gh auth login --with-token <<< "$GITHUB_TOKEN"
+      
       - name: Push docs
         run: ${{ github.workspace }}/monorepo/.github/scripts/pushdocs.sh
         shell: bash
