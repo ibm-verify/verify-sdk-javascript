@@ -6,7 +6,7 @@ PAGES_BRANCH="main"
 DESTINATION_ROOT="${GITHUB_WORKSPACE}/docs"
 SOURCE_ROOT="${GITHUB_WORKSPACE}/monorepo"
 TIMESTAMP=$(date +%Y%m%d%H%M%S)
-BRANCH_NAME="feature/auto-pr-${{ github.run_id }}-${TIMESTAMP}"
+BRANCH_NAME="feature/auto-pr-${GITHUB_RUN_ID}-${TIMESTAMP}"
 
 echo "Generated branch name: $BRANCH_NAME"
 
