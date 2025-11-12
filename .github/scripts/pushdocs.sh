@@ -33,23 +33,29 @@ git config -l | grep 'http\..*\.extraheader' | cut -d= -f1 | \
 git config user.email "shankarv@sg.ibm.com"
 git config user.name "shankarv"
 
-# switch to a feature branch
-git checkout -b $BRANCH_NAME
+if git diff --exit-code; then
+  echo "No changes found."
+  git status
+else
+  echo "Changes found (unstaged or staged changes exist)."
+  # switch to a feature branch
+  git checkout -b $BRANCH_NAME
 
-# commit changes
-git add -A
-git commit -m "${MESSAGE}"
-git status
+  # commit changes
+  git add -A
+  git commit -m "${MESSAGE}"
+  git status
 
-# push to repo
-git push -u origin $BRANCH_NAME
+  # push to repo
+  git push -u origin $BRANCH_NAME
 
-# create a PR
-gh pr create \
-  --body "" \
-  --title "docs(auto): update documentation" \
-  --head "$BRANCH_NAME" \
-  --base "master"
+  # create a PR
+  gh pr create \
+    --body "" \
+    --title "docs(auto): update documentation" \
+    --head "$BRANCH_NAME" \
+    --base "master"
+fi
 
 # git config --get remote.origin.url
 # git remote set-url origin https://${{ secrets.GH_PAGES_TOKEN }}@github.com/${PAGES_USER}/${PAGES_REPO}
