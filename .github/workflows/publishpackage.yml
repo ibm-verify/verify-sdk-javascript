@@ -29,6 +29,7 @@ jobs:
         env:
           EVENT_TYPE: ${{ github.event_name }}
           IS_PRERELEASE: ${{ github.event.release.prerelease }}
+          NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
           echo "Update npm"
           npm install -g npm@latest
