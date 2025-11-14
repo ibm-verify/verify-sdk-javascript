@@ -3,9 +3,6 @@ name: Publish packages to NPM
 on:
   release:
     types: [created]
-  push:
-    tags:
-    - '**'
 jobs:
   publish:
     runs-on: ubuntu-latest 
@@ -23,6 +20,7 @@ jobs:
       - name: Publish package to NPM
         run: |
           TAG=${GITHUB_REF:10}
+          echo "Processing tag: $TAG"
           MODULE=`echo "$TAG" | sed -e 's/@ibm-verify\/\([a-zA-Z].*\)@.*$/\1/'`
           # This step would fail if module is not a valid sdk 
           cd ${GITHUB_WORKSPACE}/sdk/${MODULE}
