@@ -3,6 +3,11 @@ name: Publish packages to NPM
 on:
   release:
     types: [created]
+
+permissions:
+  id-token: write
+  contents: read
+
 jobs:
   publish:
     runs-on: ubuntu-latest 
@@ -18,10 +23,18 @@ jobs:
           node-version: '16.x'
           registry-url: 'https://registry.npmjs.org'
       - name: Publish package to NPM
+        env:
+          IS_PRERELEASE: ${{ github.event.release.prerelease }}
         run: |
           TAG=${GITHUB_REF:10}
           echo "Processing tag: $TAG"
           MODULE=`echo "$TAG" | sed -e 's/@ibm-verify\/\([a-zA-Z].*\)@.*$/\1/'`
           # This step would fail if module is not a valid sdk 
           cd ${GITHUB_WORKSPACE}/sdk/${MODULE}
-          npm publish --access public
+          if [ "$IS_PRERELEASE" = "true" ]; then
+            echo "It's a pre-release."
+            npm publish --dry-run --access public
+          else
+            echo "It's a release."
+            npm publish --access public
+          fi
