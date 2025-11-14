@@ -4,9 +4,8 @@ on:
   release:
     types: [created]
   push:
-    branches:
-      - develop
-      - main
+    tags:
+      - '**'
 
 permissions:
   id-token: write
