@@ -44,7 +44,7 @@ jobs:
           npm ci
           npm run build --if-present
 
-          if [ "$IS_PRERELEASE" = "true" ]; then
+          if [[ "$EVENT_TYPE" == "push" || ["$IS_PRERELEASE" == "true" ]]; then
             echo "It's a pre-release."
             npm publish --dry-run --access public
           else
