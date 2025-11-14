@@ -1,6 +1,6 @@
 {
   "name": "@ibm-verify/privacy",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Data Privacy and Consent Management SDK",
   "main": "index.js",
   "files": [
