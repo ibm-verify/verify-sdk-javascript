@@ -1,0 +1,20 @@
+defaults:
+  jiraProjectKey: VDEV
+  jiraIssueTypeName: Risk
+  jiraAutoCloseTransitionName: "Done"
+  jiraFields:
+    labels:
+    - "tekton"
+    - "security-scanning"
+    - "verify-sdk-javascript"
+    components:
+      - name: "verify-sdk-javascript"
+
+squads:
+- name: development
+  sourceRepositories:
+  - name: Verify SDK for JavaScript
+    sourceRepos: 
+    - name: github.com/ibm-verify/verify-sdk-javascript
+#      properties:
+#      - repository_token_name: github-com-token
