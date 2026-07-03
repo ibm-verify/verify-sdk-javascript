@@ -1,7 +1,7 @@
 {
   "name": "ibm-verify",
   "description": "IBM Verify monorepo for JavaScript SDKs",
-  "author": "Raghuram Kokalla <raghuram@sg.ibm.com>",
+  "author": "Vivek Shankar <shankarv@sg.ibm.com>",
   "workspaces": [
     "sdk/*"
   ],
