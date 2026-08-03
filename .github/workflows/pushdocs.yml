@@ -20,20 +20,20 @@ jobs:
 
     steps:
       - name: Checkout sdk monorepo
-        uses: actions/checkout@v2
+        uses: actions/checkout@v4
         with:
           path: monorepo
 
       - name: Checkout github docs repo
-        uses: actions/checkout@v2
+        uses: actions/checkout@v4
         with:
           repository: ibm-verify/ibm-verify.github.io
           path: docs
 
       - name: Install npm
-        uses: actions/setup-node@v2
+        uses: actions/setup-node@v5
         with:
-          node-version: '12'
+          node-version: '24'
 
       - name: Authorize GitHub CLI
         env:
